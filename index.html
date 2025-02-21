@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Title</title>
+    <style>
+        body{
+            background: #efefef;
+        }
+        .JustTitle{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: #010ce1;
+            height: 55px;
+        }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+        .cards {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 40px;
+         justify-items: center;
+            margin: auto;
+     }
+
+
+        .card1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 250px;
+        height: 300px;
+        background: #ffffff;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+        -4px 4px 10px rgba(0, 0, 0, 0.2);
+
+    }
+    .titleCard1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #010ce1;
+        width: 100%;
+        color: #fafafa;
+        font-weight: bold;
+        font-size: 20px;
+        height: 45px;
+
+    }
+    .downCard1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #e6e6e6;
+        width: 100%;
+        color: #4e4e4e;
+    }
+    .downText{
+        align-items: center;
+        padding: 14px;
+        display: flex;
+        justify-content: center;
+        height: 55px;
+        font-size: 15px;
+    }
+    .firstInfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .firstInfoTitle{
+        font-size: 35px;
+        font-weight: bold;
+        color: #404040;
+    }
+    .firstInfoDown{
+        font-size: 20px;
+        font-weight: bold;
+        color: #404040;
+        padding: 10px;
+    }
+    #result41{
+        height: 200px;
+        width: 300px;
+    }
+    .positionImgAndP{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+
+    }
+    img{
+        width: 100px;
+        height: 40px;
+    }
+    .positionImgAndP>p{
+        color: #f8f8f8;
+    }
+    .buttonPosition{
+        display: flex;
+        padding-right: 40px;
+    }
+    .styleButton{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #010ce1;
+        color: #ececec;
+        border-radius: 6px;
+        font-size: 15px;
+        width: 100px;
+        border: 1px solid #ececec;
+        padding: 3px;
+        font-weight: bold;
+
+    }
+    .positionResult4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+        height: 150px;
+    }
+    #result41{
+        font-size: 200px;
+        font-weight: bold;
+
+    }
+        @media (max-width: 1024px) {
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                justify-items: center;
+            }
+        }
+        @media (max-width: 768px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                justify-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                justify-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="JustTitle">
+        <div class="positionImgAndP">
+            <img class="imgStyle" src="./img/logo.png">
+            <p>Utilities > Keycodes</p>
+
+        </div>
+        <div class="buttonPosition">
+            <button class="styleButton">Table</button>
+        </div>
+
+    </div>
+
+    <div class="firstInfo">
+        <div>
+            <p class="firstInfoTitle">JavaScript Key Code <span class="result4"></span></p>
+        </div>
+
+        <div class="positionResult4">
+            <p id="result41"></p>
+        </div>
+
+        <div>
+            <p class="firstInfoDown">Key Code Information </p>
+        </div>
+    </div>
+
+    <div class="cards">
+    <div class="card1">
+        <div class="titleCard1">
+            <p>event.ctrlKey</p>
+        </div>
+        <div id="result1"  style="font-size: 30px"></div>
+        <div class="downCard1">
+        <p class="downText">`ctrlKey` is a boolean that shows if the "Ctrl" key was pressed (`true`) or not (`false`).</p>
+        </div>
+    </div>
+
+    <div class="card1">
+        <div class="titleCard1">
+            <p>event.key</p>
+        </div>
+        <div id="result2" style="font-size: 50px"></div>
+        <div class="downCard1">
+            <p class="downText">The value of the key pressed.
+                Accounts for modifiers keys that return CAPS and alternate chars.</p>
+        </div>
+    </div>
+
+    <div class="card1">
+        <div class="titleCard1">
+            <p>event.code</p>
+        </div>
+        <div id="result3"  style="font-size: 50px"></div>
+        <div class="downCard1">
+            <p class="downText">The physical key on the keyboard.
+                Doesn't care if you are holding a modifier like Shift.</p>
+        </div>
+    </div>
+
+    <div class="card1">
+        <div class="titleCard1">
+            <p>event.keyCode</p>
+        </div>
+        <div id="result4"  style="font-size: 50px"></div>
+        <div class="downCard1">
+            <p class="downText">`keydown` is an event triggered when a key is pressed.
+                It provides information about the pressed key, such as `key`, `code`, and `ctrlKey`.</p>
+        </div>
+    </div>
+    </div>
+
+
+</div>
+<script src="./script.js"></script>
+</body>
+</html>
